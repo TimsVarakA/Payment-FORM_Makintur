@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Оплата заказа</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/mobile.css" rel="stylesheet" type="text/css" media="only screen and (max-device-width:610px)">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
+</head>
+  <body>
+  <div class="wrapper">
+    <div class="content">
+      <div class="p_page">
+        <div class="paymnet_info">
+            <div class="company">Компания</div>
+            <div class="company_name">Makintour LLC</div>
+            <div class="payment">Оплата заказа №</div>
+            <div class="payment_order">00125</div>
+            <div class="payment">Описание заказа:</div>
+            <div class="payment_description">Туристические услуги</div>
+            <div class="payment">Сумма заказа:</div>
+            <div class="payment_price">24750.00 грн.</div>
+        </div>
+
+        <div class="push" style="height:15px"></div>
+    <div class="spin"></div>
+        <div class="card">
+          <div class="card_top">
+            <span class="infocard">Введите реквизиты платежной карты <br> (номер и срок действия) </span>
+             <div class="numbercard">
+          <input type="tel" value="" id="cardNumber" autocomplete="off" maxlength="4" class="NumGroup"  pattern="[0-9]*" onkeyup="if(this.value.length >= 4){document.getElementById('cardNumber2').focus();}"/>
+          <input type="tel" value="" id="cardNumber2" autocomplete="off" maxlength="4" class="NumGroup"  pattern="[0-9]*" onkeyup="if(this.value.length >= 4){document.getElementById('cardNumber3').focus();}"/>
+          <input type="tel" value="" id="cardNumber3" autocomplete="off" maxlength="4" class="NumGroup"  pattern="[0-9]*" onkeyup="if(this.value.length >= 4){document.getElementById('cardNumber4').focus();}"/>
+          <input type="tel" value="" id="cardNumber4" autocomplete="off" maxlength="4" class="NumGroup"  pattern="[0-9]*" onkeyup="if(this.value.length >= 4){document.getElementById('cardExpirationMonth').focus();}"/>
+            </div>
+            <div class="datecard" >
+              <select id="cardExpirationMonth" onchange="if(this.value.length >= 2){document.getElementById('cardExpirationYear').focus();}">
+                <option value="" selected="selected"></option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select id="cardExpirationYear" onchange="if(this.value.length >= 4){document.getElementById('cvv').focus();}">
+                <option value="" selected="selected"></option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+                <option value="2031">2031</option>
+                <option value="2032">2032</option>
+                <option value="2033">2033</option>
+              </select>
+            </div> 
+            <div class="expiration-period">
+              <div class="Month">Месяц</div>
+              <span>/</span>
+              <div class="Year">Год</div>
+            </div>
+        </div>
+        <div class="card_bg">
+          <div class="line_card_bg"></div>             
+            <div class="cod">
+              
+              <div class="help_card__card_cvv" onmouseout="closeCard();" onmouseover="openCard(event);">
+                   <span>?</span>
+               </div>
+              <span class="p_cod"> CVC2/CVV2:</span>
+              <input type="password" maxlength="3" id="cvv"  pattern="[0-9]*" onkeyup="if(this.value.length >= 3){document.getElementById('button').focus();}" />
+            </div>
+      <div class="buttonorig">
+            <a href="" onClick=" document.getElementById('form').submit();" id="button">Оплатить</a>
+            </div>
+        </div>
+      </div>
+      <div class="help_card__card" id="help_card__card">
+        <div class="help_card__line"></div>
+        <div class="help_card__cvv">123</div>
+       </div>
+      <div class="logo_mps"></div>
+		
+
+
+        <div class="push" style="height:5px"></div>
+		
+		<div class="support">В случае неуспешного платежа обратитесь в Службу поддержки Makintour по номеру: <br>
+            <strong style="font-size:13px;">0 800 800 025</strong> - бесплатно со стационарных и мобильных телефонов всех операторов Украины;<br>
+            <strong style="font-size:13px;">+38 096 595 01 01</strong> - для международных звонков;<br>
+            напишите нам <a href="mailto:support@makintour.com">support@makintour.com</a> или обратитесь в онлайн-чат на сайте <a href="https://makintour.com" target="_blank">https://makintour.com</a>
+          </div>
+          <div class="ip">
+            <span class="color">*</span>Ваш IP-адрес мониторится для  предотвращения  мошенничества.<br/>
+            <span class="color">*</span>Мошенничество преследуется по закону. 
+          </div>
+
+      </div>
+    </div> 
+	</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jqery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/jquery.groupinputs.js"></script>
+
+ 
+  </body>
+</html>
